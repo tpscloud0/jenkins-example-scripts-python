@@ -3,14 +3,14 @@ pipeline {
   stages {
     stage('version') {
       steps {
-        bat '''cd %path%
-        call python --version'''
+        sh '''cd %nohup%
+         python --version'''
       }
     }
     stage('hello') {
       steps {
-       bat '''cd %path%
-       call python hello.py'''
+        sh '''cd %path%
+         python hello.py'''
       }
     }
   }
