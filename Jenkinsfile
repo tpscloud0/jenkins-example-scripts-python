@@ -4,16 +4,14 @@ pipeline {
     stage('version') {
       steps {
         script{
-              def version_numbers = bat(script: 'python hello.py', returnStdout: true)
-              def versions_as_array = version_numbers.split('\n')
-              prnitln(version_numbers)
+            bat 'python --verison'
         }
       }
     }
     stage('hello') {
       steps {
          script{
-            bat 'python.exe hello.py'
+            bat 'python hello.py'
          } 
       }
     }
