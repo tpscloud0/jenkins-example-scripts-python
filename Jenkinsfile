@@ -4,7 +4,7 @@ pipeline {
     stage('version') {
       steps {
         script{
-              bat 'python -v'
+              bat 'cd'
         }
       }
     }
