@@ -4,7 +4,7 @@ pipeline {
     stage('version') {
       steps {
         script{
-              bat 'C:\Program Files\Python310\'
+              bat 'cd C:\Program Files\Python310'
         }
       }
     }
