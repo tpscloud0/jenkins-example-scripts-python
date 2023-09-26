@@ -4,7 +4,7 @@ pipeline {
     stage('version') {
       steps {
         script{
-              bat 'python hello.py'
+              bat 'python --version'
         }
       }
     }
