@@ -4,7 +4,8 @@ pipeline {
     stage('version') {
       steps {
         script{
-              bat 'cd'
+              def version_numbers = bat(script: 'python3 --version', returnStdout: true)
+              def versions_as_array = version_numbers.split('\n')
         }
       }
     }
@@ -17,3 +18,5 @@ pipeline {
     }
   }
 }
+def version_numbers = bat(script: 'python get_version_numbers.py', returnStdout: true)
+                def versions_as_array = version_numbers.split('\n')
