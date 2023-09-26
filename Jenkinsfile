@@ -6,6 +6,7 @@ pipeline {
         script{
               def version_numbers = bat(script: 'python hello.py', returnStdout: true)
               def versions_as_array = version_numbers.split('\n')
+              prnitln(version_numbers)
         }
       }
     }
